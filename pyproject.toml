@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "neuronki"
+version = "0.1.0"
+description = "Needed packages to run python project"
+authors = ["Grzegorz Kodrzycki <g.kodrzycki20@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pygame = "^2.6.1"
+tqdm = "^4.67.1"
+torch = "^2.7.1"
+numpy = "^2.3.0"
+isort = "5.13.2"
+black = "24.4.2"
+pre-commit = "^4.2.0"
+base65536 = "^0.1.1"
+wandb = "^0.20.1"
+dotenv = "^0.9.9"
+
+[tool.black]
+line-length = 120
+exclude = '''
+codingame/codingame_template\.py
+currentCG\.py
+'''
+
+
+[tool.isort]
+profile = "black"
+skip = ["codingame/codingame_template.py","currentCG.py"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
